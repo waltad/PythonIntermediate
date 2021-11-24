@@ -40,3 +40,4 @@ if __name__ == '__main__':
         print('Right side:', get_avg(*data['right_side']))
         print('Left side:', get_avg(*data['left_side']))
         print('All:', get_avg(*data['right_side'], *data['left_side']))
+        # print(get_avg(1, 3, 'a'))
