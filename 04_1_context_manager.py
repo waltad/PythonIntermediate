@@ -6,3 +6,16 @@ W funkcji __enter__ zapisz aktulany timestamp, a w funkcji __exit__ odejmij od a
 from time import time, sleep
 
 
+class TimeIt:
+    def __enter__(self):
+        self.start = time()
+        return self
+
+    def __exit__(self, type, value, traceback):
+        total = time() - self.start
+        print("{}[s]".format(total))
+
+
+if __name__ == '__main__':
+    with TimeIt():
+        sleep(1)
