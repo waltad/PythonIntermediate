@@ -13,7 +13,7 @@ class TimeIt:
 
     def __exit__(self, type, value, traceback):
         total = time() - self.start
-        print("{}[s]".format(total))
+        print("{} [s]".format(total))
 
 
 if __name__ == '__main__':
